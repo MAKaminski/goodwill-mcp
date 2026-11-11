@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" role="img" aria-label="goodwill-mcp: log donations from a receipt and a few photos">
+  <rect width="1280" height="320" rx="24" fill="#10231c"/>
+  <rect x="24" y="24" width="1232" height="272" rx="16" fill="none" stroke="#2f6f57" stroke-width="2"/>
+  <g transform="translate(88,84)">
+    <rect x="0" y="0" width="112" height="152" rx="10" fill="#f4efe4"/>
+    <path d="M0 152 l14 -12 l14 12 l14 -12 l14 12 l14 -12 l14 12 l14 -12 l14 12 v-12 h-112z" fill="#10231c"/>
+    <rect x="18" y="24" width="76" height="8" rx="4" fill="#2f6f57"/>
+    <rect x="18" y="46" width="56" height="6" rx="3" fill="#b9b2a3"/>
+    <rect x="18" y="62" width="68" height="6" rx="3" fill="#b9b2a3"/>
+    <rect x="18" y="78" width="44" height="6" rx="3" fill="#b9b2a3"/>
+    <rect x="18" y="102" width="76" height="10" rx="5" fill="#e0a526"/>
+  </g>
+  <path d="M232 160 h56 m-16 -14 l16 14 l-16 14" fill="none" stroke="#e0a526" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="328" y="150" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="68" font-weight="700" fill="#f4efe4">goodwill-mcp</text>
+  <text x="330" y="200" font-family="system-ui,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="27" fill="#a9cdbb">Receipt + photos in. Logged donation and Form 8283 rows out.</text>
+  <text x="330" y="244" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="19" fill="#e0a526">4 tools · local SQLite · $0 server cost · MIT</text>
+</svg>

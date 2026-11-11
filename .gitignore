@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.db
+*.db-*
+.env
+.env.*
+archive/
+inbox/
+evals/private/
+.DS_Store
