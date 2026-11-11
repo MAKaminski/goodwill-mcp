@@ -40,7 +40,8 @@ function parseFlags(argv: string[], c: Command<any>) {
     if (key === 'from_json') { Object.assign(out, JSON.parse(readFileSync(String(val), 'utf8'))); continue; }
     const field = (c.input as Record<string, z.ZodTypeAny>)[key];
     if (!field) throw new UserError('BAD_ARG', `Unknown flag --${a.slice(2)} for ${c.noun} ${c.verb}.`);
-    const base = field instanceof z.ZodOptional || field instanceof z.ZodDefault ? (field as any)._def.innerType : field;
+    let base: any = field;
+    while (base instanceof z.ZodOptional || base instanceof z.ZodDefault) base = base.def?.innerType ?? base._def.innerType;
     if (base instanceof z.ZodNumber) out[key] = Number(val);
     else if (base instanceof z.ZodBoolean) out[key] = val === true || val === 'true';
     else if (base instanceof z.ZodArray || base instanceof z.ZodObject) out[key] = JSON.parse(String(val));
