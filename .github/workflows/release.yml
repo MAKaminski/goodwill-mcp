@@ -9,6 +9,8 @@ permissions:
 jobs:
   npm:
     runs-on: ubuntu-latest
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -18,8 +20,9 @@ jobs:
       - name: Publish to npm
         if: ${{ env.NODE_AUTH_TOKEN != '' }}
         run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Note when npm was skipped
+        if: ${{ env.NODE_AUTH_TOKEN == '' }}
+        run: echo "::warning::NPM_TOKEN secret not set; skipped npm publish. The .mcpb release still ships."
   mcpb:
     # Built on macOS so the bundled image library matches Apple Silicon Macs.
     runs-on: macos-latest
