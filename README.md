@@ -3,10 +3,10 @@
 </p>
 
 <p align="center">
-  <img alt="status: design" src="https://img.shields.io/badge/status-design%20%E2%86%92%20v0.1-e0a526">
+  <img alt="status design" src="https://img.shields.io/badge/status-design%20%E2%86%92%20v0.1-e0a526">
   <img alt="license: MIT" src="https://img.shields.io/badge/license-MIT-2f6f57">
   <img alt="MCP: stdio" src="https://img.shields.io/badge/MCP-stdio-10231c">
-  <img alt="node >= 22.13" src="https://img.shields.io/badge/node-%E2%89%A5%2022.13-2f6f57">
+  <img alt="node 22.13 or newer" src="https://img.shields.io/badge/node-%E2%89%A5%2022.13-2f6f57">
 </p>
 
 # goodwill-mcp
