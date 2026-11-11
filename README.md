@@ -22,13 +22,13 @@
 
 **Claude Desktop (one click).** Download [`goodwill-mcp.mcpb`](https://github.com/MAKaminski/goodwill-mcp/releases/latest) from the latest release and double-click it. Pick your inbox folder when asked.
 
-**Claude Code.**
+**Claude Code.** (npm package publishing shortly; until then use *From source* below.)
 
 ```bash
 claude mcp add goodwill -- npx -y goodwill-mcp server start
 ```
 
-**Any MCP client** (Claude Desktop config, Cursor, others):
+**Any MCP client** (Claude Desktop config, Cursor, others), once the npm package is live:
 
 ```json
 { "mcpServers": { "goodwill": { "command": "npx", "args": ["-y", "goodwill-mcp", "server", "start"] } } }
