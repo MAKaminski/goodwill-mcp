@@ -1,0 +1,38 @@
+name: Release
+# Push a tag like v0.1.0. Publishes to npm (needs the NPM_TOKEN secret) and
+# attaches a one-click goodwill-mcp.mcpb bundle for Claude Desktop to the GitHub release.
+on:
+  push: { tags: ['v*'] }
+permissions:
+  contents: write
+  id-token: write
+jobs:
+  npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, registry-url: 'https://registry.npmjs.org', cache: npm }
+      - run: npm ci
+      - run: npm test
+      - name: Publish to npm
+        if: ${{ env.NODE_AUTH_TOKEN != '' }}
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+  mcpb:
+    # Built on macOS so the bundled image library matches Apple Silicon Macs.
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npm run pack:mcpb
+      - name: Create GitHub release with the bundle
+        run: |
+          gh release create "$GITHUB_REF_NAME" goodwill-mcp.mcpb \
+            --title "goodwill-mcp $GITHUB_REF_NAME" --generate-notes || \
+          gh release upload "$GITHUB_REF_NAME" goodwill-mcp.mcpb --clobber
+        env:
+          GH_TOKEN: ${{ github.token }}

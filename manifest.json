@@ -1,0 +1,44 @@
+{
+  "manifest_version": "0.2",
+  "name": "goodwill-mcp",
+  "display_name": "goodwill-mcp: donation log",
+  "version": "0.1.0",
+  "description": "Log thrift-store donations from a receipt and item photos, with Form 8283 rows. Not affiliated with Goodwill Industries.",
+  "long_description": "Drop your receipt and item photos in a folder and ask Claude to log the drop-off. Items are priced from a published thrift-shop price guide, stored in one SQLite file on your machine, and rolled up into Form 8283 Section A rows. Reports fair market value donated, never tax saved. Not tax advice.",
+  "author": { "name": "Michael Kaminski", "url": "https://github.com/MAKaminski" },
+  "repository": { "type": "git", "url": "https://github.com/MAKaminski/goodwill-mcp" },
+  "homepage": "https://github.com/MAKaminski/goodwill-mcp",
+  "license": "MIT",
+  "keywords": ["donations", "goodwill", "taxes", "form 8283", "charity"],
+  "server": {
+    "type": "node",
+    "entry_point": "dist/cli.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["--no-warnings=ExperimentalWarning", "${__dirname}/dist/cli.js", "server", "start"],
+      "env": { "GOODWILL_MCP_INBOX": "${user_config.inbox}" }
+    }
+  },
+  "user_config": {
+    "inbox": {
+      "type": "directory",
+      "title": "Donation inbox folder",
+      "description": "Where you drop receipt and item photos (JPEG, PNG or WebP).",
+      "required": true,
+      "default": "${HOME}/Donations/inbox"
+    }
+  },
+  "tools": [
+    { "name": "intake_open", "description": "Read the receipt and item photos from the inbox." },
+    { "name": "donation_create", "description": "Log a donation and price its items." },
+    { "name": "donation_update", "description": "Correct or void a donation, with a revision trail." },
+    { "name": "donation_report", "description": "Year totals, CSV, Form 8283 rows, donor-portal text." }
+  ],
+  "prompts": [
+    { "name": "log_donation", "description": "Read the inbox photos and log the donation.", "text": "Log my donation: call intake_open, read the receipt and items, then call donation_create." }
+  ],
+  "compatibility": {
+    "platforms": ["darwin", "win32", "linux"],
+    "runtimes": { "node": ">=22.13.0" }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "goodwill-mcp",
+  "version": "0.1.0",
+  "description": "Log thrift-store donations from a receipt and item photos. A local MCP server for Claude, with Form 8283 rows. Not affiliated with Goodwill Industries.",
+  "type": "module",
+  "bin": { "goodwill-mcp": "dist/cli.js" },
+  "main": "dist/server.js",
+  "files": ["dist", "guides", "README.md", "LICENSE"],
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node scripts/chmod.mjs",
+    "dev": "npm run build && npx -y @modelcontextprotocol/inspector node dist/cli.js server start",
+    "test": "npm run build && node --test --no-warnings test/*.test.mjs",
+    "pack:mcpb": "npm run build && node scripts/build-mcpb.mjs"
+  },
+  "keywords": ["mcp", "model-context-protocol", "claude", "goodwill", "donations", "form-8283", "taxes", "charity"],
+  "repository": { "type": "git", "url": "git+https://github.com/MAKaminski/goodwill-mcp.git" },
+  "homepage": "https://github.com/MAKaminski/goodwill-mcp#readme",
+  "bugs": { "url": "https://github.com/MAKaminski/goodwill-mcp/issues" },
+  "author": "Michael Kaminski",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "sharp": "^0.35.5",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.6.0"
+  }
+}

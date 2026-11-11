@@ -8,3 +8,5 @@ archive/
 inbox/
 evals/private/
 .DS_Store
+.mcpb-stage/
+*.mcpb

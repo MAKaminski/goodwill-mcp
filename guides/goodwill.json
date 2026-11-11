@@ -1,0 +1,356 @@
+{
+  "org": {
+    "slug": "goodwill",
+    "name": "Goodwill (regional organization on your receipt)",
+    "ein": null
+  },
+  "version": "gii-2023",
+  "tax_year": 2026,
+  "source_url": "https://www.ocgoodwill.org/wp-content/uploads/2024/01/Valuation-Guide-2023.pdf",
+  "source_note": "Price ranges compiled by Goodwill Industries International for items commonly sold in Goodwill stores, items assumed in good condition. Regional Goodwills publish their own guides; replace this file with yours if it differs.",
+  "rates": [
+    {
+      "category": "womens.shirt_blouse",
+      "item": "Women's shirts / blouses",
+      "group": "clothing",
+      "low": 2,
+      "high": 12
+    },
+    {
+      "category": "mens.shirt_blouse",
+      "item": "Men's shirts / blouses",
+      "group": "clothing",
+      "low": 2,
+      "high": 8
+    },
+    {
+      "category": "childrens.shirt_blouse",
+      "item": "Children's shirts / blouses",
+      "group": "clothing",
+      "low": 1,
+      "high": 6
+    },
+    {
+      "category": "womens.sweater",
+      "item": "Women's sweaters",
+      "group": "clothing",
+      "low": 5,
+      "high": 15
+    },
+    {
+      "category": "mens.sweater",
+      "item": "Men's sweaters",
+      "group": "clothing",
+      "low": 5,
+      "high": 15
+    },
+    {
+      "category": "childrens.sweater",
+      "item": "Children's sweaters",
+      "group": "clothing",
+      "low": 1,
+      "high": 6
+    },
+    {
+      "category": "womens.t_shirt",
+      "item": "Women's t-shirts",
+      "group": "clothing",
+      "low": 1,
+      "high": 6
+    },
+    {
+      "category": "mens.t_shirt",
+      "item": "Men's t-shirts",
+      "group": "clothing",
+      "low": 1,
+      "high": 6
+    },
+    {
+      "category": "childrens.t_shirt",
+      "item": "Children's t-shirts",
+      "group": "clothing",
+      "low": 0.5,
+      "high": 3
+    },
+    {
+      "category": "womens.tank",
+      "item": "Women's tanks",
+      "group": "clothing",
+      "low": 1,
+      "high": 6
+    },
+    {
+      "category": "mens.tank",
+      "item": "Men's tanks",
+      "group": "clothing",
+      "low": 1,
+      "high": 6
+    },
+    {
+      "category": "childrens.tank",
+      "item": "Children's tanks",
+      "group": "clothing",
+      "low": 0.5,
+      "high": 3
+    },
+    {
+      "category": "womens.vest",
+      "item": "Women's vests",
+      "group": "clothing",
+      "low": 3,
+      "high": 9
+    },
+    {
+      "category": "mens.vest",
+      "item": "Men's vests",
+      "group": "clothing",
+      "low": 3,
+      "high": 9
+    },
+    {
+      "category": "childrens.vest",
+      "item": "Children's vests",
+      "group": "clothing",
+      "low": 1,
+      "high": 3
+    },
+    {
+      "category": "womens.pants_casual",
+      "item": "Women's casual pants",
+      "group": "clothing",
+      "low": 2,
+      "high": 10
+    },
+    {
+      "category": "mens.pants_casual",
+      "item": "Men's casual pants",
+      "group": "clothing",
+      "low": 2,
+      "high": 10
+    },
+    {
+      "category": "childrens.pants_casual",
+      "item": "Children's casual pants",
+      "group": "clothing",
+      "low": 1,
+      "high": 6
+    },
+    {
+      "category": "womens.pants_dress",
+      "item": "Women's dress pants",
+      "group": "clothing",
+      "low": 2,
+      "high": 10
+    },
+    {
+      "category": "mens.pants_dress",
+      "item": "Men's dress pants",
+      "group": "clothing",
+      "low": 2,
+      "high": 15
+    },
+    {
+      "category": "childrens.pants_dress",
+      "item": "Children's dress pants",
+      "group": "clothing",
+      "low": 1,
+      "high": 6
+    },
+    {
+      "category": "womens.shorts",
+      "item": "Women's shorts",
+      "group": "clothing",
+      "low": 1,
+      "high": 9
+    },
+    {
+      "category": "mens.shorts",
+      "item": "Men's shorts",
+      "group": "clothing",
+      "low": 1,
+      "high": 9
+    },
+    {
+      "category": "childrens.shorts",
+      "item": "Children's shorts",
+      "group": "clothing",
+      "low": 0.5,
+      "high": 6
+    },
+    {
+      "category": "womens.skirt",
+      "item": "Women's skirts",
+      "group": "clothing",
+      "low": 2,
+      "high": 12
+    },
+    {
+      "category": "childrens.skirt",
+      "item": "Children's skirts",
+      "group": "clothing",
+      "low": 1,
+      "high": 6
+    },
+    {
+      "category": "womens.jeans",
+      "item": "Women's jeans",
+      "group": "clothing",
+      "low": 4,
+      "high": 21
+    },
+    {
+      "category": "mens.jeans",
+      "item": "Men's jeans",
+      "group": "clothing",
+      "low": 4,
+      "high": 21
+    },
+    {
+      "category": "childrens.jeans",
+      "item": "Children's jeans",
+      "group": "clothing",
+      "low": 2,
+      "high": 10
+    },
+    {
+      "category": "womens.dress_everyday",
+      "item": "Women's everyday dresses",
+      "group": "clothing",
+      "low": 3,
+      "high": 17
+    },
+    {
+      "category": "childrens.dress_everyday",
+      "item": "Children's everyday dresses",
+      "group": "clothing",
+      "low": 2,
+      "high": 6
+    },
+    {
+      "category": "womens.dress_evening",
+      "item": "Women's evening wear",
+      "group": "clothing",
+      "low": 10,
+      "high": 30
+    },
+    {
+      "category": "womens.suit_two_piece",
+      "item": "Women's two-piece suits",
+      "group": "clothing",
+      "low": 5,
+      "high": 30
+    },
+    {
+      "category": "mens.suit_two_piece",
+      "item": "Men's two-piece suits",
+      "group": "clothing",
+      "low": 10,
+      "high": 30
+    },
+    {
+      "category": "womens.pajamas",
+      "item": "Women's pajamas",
+      "group": "clothing",
+      "low": 2,
+      "high": 10
+    },
+    {
+      "category": "mens.pajamas",
+      "item": "Men's pajamas",
+      "group": "clothing",
+      "low": 2,
+      "high": 10
+    },
+    {
+      "category": "childrens.pajamas",
+      "item": "Children's pajamas",
+      "group": "clothing",
+      "low": 1,
+      "high": 6
+    },
+    {
+      "category": "womens.sweats",
+      "item": "Women's sweats",
+      "group": "clothing",
+      "low": 1,
+      "high": 6
+    },
+    {
+      "category": "mens.sweats",
+      "item": "Men's sweats",
+      "group": "clothing",
+      "low": 2,
+      "high": 10
+    },
+    {
+      "category": "childrens.sweats",
+      "item": "Children's sweats",
+      "group": "clothing",
+      "low": 1,
+      "high": 6
+    },
+    {
+      "category": "womens.coat",
+      "item": "Women's coats",
+      "group": "clothing",
+      "low": 7,
+      "high": 40
+    },
+    {
+      "category": "mens.coat",
+      "item": "Men's coats",
+      "group": "clothing",
+      "low": 7,
+      "high": 40
+    },
+    {
+      "category": "childrens.coat",
+      "item": "Children's coats",
+      "group": "clothing",
+      "low": 3,
+      "high": 15
+    },
+    {
+      "category": "womens.blazer",
+      "item": "Women's blazers",
+      "group": "clothing",
+      "low": 6,
+      "high": 12
+    },
+    {
+      "category": "mens.blazer",
+      "item": "Men's blazers",
+      "group": "clothing",
+      "low": 6,
+      "high": 12
+    },
+    {
+      "category": "childrens.blazer",
+      "item": "Children's blazers",
+      "group": "clothing",
+      "low": 2,
+      "high": 6
+    },
+    {
+      "category": "womens.shoes",
+      "item": "Women's shoes / tennis shoes",
+      "group": "clothing",
+      "low": 4,
+      "high": 9
+    },
+    {
+      "category": "mens.shoes",
+      "item": "Men's shoes / tennis shoes",
+      "group": "clothing",
+      "low": 4,
+      "high": 9
+    },
+    {
+      "category": "childrens.shoes",
+      "item": "Children's shoes / tennis shoes",
+      "group": "clothing",
+      "low": 2,
+      "high": 6
+    }
+  ]
+}
